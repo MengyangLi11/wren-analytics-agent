@@ -1,0 +1,30 @@
+{
+  "version": "1.0.1",
+  "source": "user_terminal_screenshot_20261117",
+  "development": {
+    "completed": 30,
+    "passed": 27,
+    "model_calls": 30,
+    "tokens": 23729,
+    "seconds": 57.261
+  },
+  "validation": {
+    "completed": 20,
+    "passed": 19,
+    "model_calls": 20,
+    "tokens": 15793,
+    "seconds": 40.538
+  },
+  "failed_ids": [
+    "C04",
+    "C09",
+    "C07",
+    "B01"
+  ],
+  "observed_failure": "condition extraction / supported decision",
+  "raw_model_arguments": "not_recorded_in_v101",
+  "combined_passed": 46,
+  "combined_completed": 50,
+  "combined_tokens": 39522,
+  "role_after_debugging": "regression"
+}

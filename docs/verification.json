@@ -1,0 +1,25 @@
+{
+  "environment": "Linux / Python 3.12.14",
+  "unit_and_ui_checks_passed": 25,
+  "offline_protocol_and_tool_regression": {
+    "completed": 50,
+    "passed": 50,
+    "total_model_calls": 0,
+    "total_tokens": 0,
+    "elapsed_seconds": 3.864
+  },
+  "offline_mode_disclaimer": "模拟模型条件修改，仅证明协议/工具回归，不代表真实模型准确率",
+  "live_qwen_evaluation": "not_run_no_user_key_in_cloud",
+  "windows_integrated_release_validation": "pending_user",
+  "prototype_12_case_protocol_regression": "passed_with_mock_model_and_real_Wren",
+  "code_sha256": {
+    "statistics.py": "f7212e19f809565dd618d6da3621319cb329b3f54d79ab9c00acd22aedc65984",
+    "common.py": "80845092b6daab102aad310f37ba4549732c38a6bef58a1025ef54e202675516",
+    "policy.py": "3c4e38732129c4dfd06cf939d5bf8e8ea8d55832459496f8ead99247b934e00a",
+    "agent.py": "65b633e74344e8e26f3610a6b671a4a9f5eea5a2be04a9684ed4458b2f6a7ef7",
+    "store.py": "cded4f5fab947b8d74cea385638f6da22e2210251fddb36686f253a3507cc3c8",
+    "__init__.py": "84402b5dfc5bf40b77f2b58c3462cc62ed21ae57a93ef062c6b0a54a4520a9ce",
+    "dataset.py": "cd635a9252a27abd0df1fb10a9e64b24664a01a8fd569d5125e71ad329207325"
+  },
+  "benchmark_sha256": "426f8856dfe37742d66d2de97baaf7bd6a64c5b21cb9d3de9fef02cdc86ab1da"
+}

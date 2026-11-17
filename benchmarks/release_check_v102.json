@@ -1,0 +1,593 @@
+{
+  "suite": "retail-release-check-v102",
+  "role": "new-wording-release-check",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "reference_benchmark_sha256": "426f8856dfe37742d66d2de97baaf7bd6a64c5b21cb9d3de9fef02cdc86ab1da",
+  "reference_method": "使用原始Excel独立Python Decimal参考值，仅改写提问措辞与对应案例标签，不改变金额或范围标准",
+  "frozen_at_utc": "2026-11-17T06:32:12.383758+00:00",
+  "frozen_code_sha256": {
+    "statistics.py": "f7212e19f809565dd618d6da3621319cb329b3f54d79ab9c00acd22aedc65984",
+    "common.py": "80845092b6daab102aad310f37ba4549732c38a6bef58a1025ef54e202675516",
+    "policy.py": "9efe53b1b9485d0f8e0c92fdc086b5b3961d84d65a6ca8be920b200ec512f8f9",
+    "agent.py": "3fdd58e44b271d274a826d4299b1db803e76c4f6de65271fd62d28d7c8cce270",
+    "store.py": "cded4f5fab947b8d74cea385638f6da22e2210251fddb36686f253a3507cc3c8",
+    "__init__.py": "a1f1da8f6cbfa9c2c6de1452774f8562e3bb6b59f852674b938d7e6a31f763dc",
+    "dataset.py": "cd635a9252a27abd0df1fb10a9e64b24664a01a8fd569d5125e71ad329207325",
+    "filters.py": "6b0c5b670fa3c0196875b5c71663327b17e0e923d862e34e87733245f8da08ba"
+  },
+  "evaluator_sha256": "cdb29a8c47df6fd26d2457977e4c10eaba5ecab512d896acd4bde4c75fde660b",
+  "cases_sha256": "7409922f9602188a769673bdce14fda84ba6dfa21114c39715c7bfa0176e9690",
+  "live_status": "not_run_in_cloud_no_user_key",
+  "cases": [
+    {
+      "id": "N01",
+      "question": "请按事件发生日期，给出2011年2月销售额、取消金额和净额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2011-02-01",
+          "end_date": "2011-02-28"
+        }
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2011-02-01",
+          "end_date": "2011-02-28"
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 27379,
+        "metrics": {
+          "gross_sales": "508869.75",
+          "cancel_amount": "8375.87",
+          "net_sales": "500493.88"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R03"
+    },
+    {
+      "id": "N02",
+      "question": "2011-04-01到2011-04-30期间，正向开票金额、取消冲减金额、净开票金额各是多少？",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2011-04-01",
+          "end_date": "2011-04-30"
+        }
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2011-04-01",
+          "end_date": "2011-04-30"
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 29484,
+        "metrics": {
+          "gross_sales": "516194.91",
+          "cancel_amount": "33316.91",
+          "net_sales": "482878.00"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R05"
+    },
+    {
+      "id": "N03",
+      "question": "只统计2011年7月份，销售金额、取消额、净销售金额分别汇总。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2011-07-01",
+          "end_date": "2011-07-31"
+        }
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2011-07-01",
+          "end_date": "2011-07-31"
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 39082,
+        "metrics": {
+          "gross_sales": "689289.86",
+          "cancel_amount": "11409.21",
+          "net_sales": "677880.65"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R08"
+    },
+    {
+      "id": "N04",
+      "question": "把起止日设为2011-11-01和2011-11-30，输出销售额、取消金额、净销售额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2011-11-01",
+          "end_date": "2011-11-30"
+        }
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2011-11-01",
+          "end_date": "2011-11-30"
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 84107,
+        "metrics": {
+          "gross_sales": "1457742.24",
+          "cancel_amount": "25010.54",
+          "net_sales": "1432731.70"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R12"
+    },
+    {
+      "id": "N05",
+      "question": "以全部现有记录为范围，分别报告销售额、取消冲减金额与净开票金额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": true
+        }
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": true
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 536429,
+        "metrics": {
+          "gross_sales": "10271034.61",
+          "cancel_amount": "478724.18",
+          "net_sales": "9792310.43"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R13"
+    },
+    {
+      "id": "N06",
+      "question": "查2012-01-01的净开票金额；若没有数据，请说明。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2012-01-01",
+          "end_date": "2012-01-01"
+        }
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "no_records",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2012-01-01",
+          "end_date": "2012-01-01"
+        },
+        "requested_metrics": [
+          "net_sales"
+        ],
+        "event_count": 0,
+        "metrics": null
+      },
+      "split": "validation",
+      "reference_case": "R16"
+    },
+    {
+      "id": "N07",
+      "question": "德国客户的全部交易记录，净销售额合计是多少？",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": true
+        },
+        "country": "Germany"
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": true,
+          "country": "Germany"
+        },
+        "requested_metrics": [
+          "net_sales"
+        ],
+        "event_count": 9095,
+        "metrics": {
+          "net_sales": "200808.40"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R18"
+    },
+    {
+      "id": "N08",
+      "question": "国家为France，按全期统计净销售额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": true
+        },
+        "country": "France"
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": true,
+          "country": "France"
+        },
+        "requested_metrics": [
+          "net_sales"
+        ],
+        "event_count": 8234,
+        "metrics": {
+          "net_sales": "182163.39"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R19"
+    },
+    {
+      "id": "N09",
+      "question": "西班牙的净销售金额，统计所有历史数据。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": true
+        },
+        "country": "Spain"
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": true,
+          "country": "Spain"
+        },
+        "requested_metrics": [
+          "net_sales"
+        ],
+        "event_count": 2467,
+        "metrics": {
+          "net_sales": "51765.20"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R21"
+    },
+    {
+      "id": "N10",
+      "question": "针对'536365'这张发票，查询全期的销售额、取消金额和净销售额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": true
+        },
+        "order_id": "536365"
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": true,
+          "order_id": "536365"
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 7,
+        "metrics": {
+          "gross_sales": "139.12",
+          "cancel_amount": "0.00",
+          "net_sales": "139.12"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R23"
+    },
+    {
+      "id": "N11",
+      "question": "请汇总全期发票C536379的正向开票金额、取消冲减金额、净开票金额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "time_range": {
+          "all_dates": true
+        },
+        "order_id": "C536379"
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "no_records",
+        "scope": {
+          "all_dates": true,
+          "order_id": "C536379"
+        },
+        "requested_metrics": [
+          "gross_sales",
+          "cancel_amount",
+          "net_sales"
+        ],
+        "event_count": 0,
+        "metrics": null
+      },
+      "split": "validation",
+      "reference_case": "R25"
+    },
+    {
+      "id": "N12",
+      "question": "只看英国，时间为2011年11月，给出取消冲减金额。",
+      "patch": {
+        "supported": true,
+        "analysis": "summary",
+        "metrics": [
+          "cancel_amount"
+        ],
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2011-11-01",
+          "end_date": "2011-11-30"
+        },
+        "country": "United Kingdom"
+      },
+      "expected": {
+        "kind": "summary",
+        "status": "ok",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2011-11-01",
+          "end_date": "2011-11-30",
+          "country": "United Kingdom"
+        },
+        "requested_metrics": [
+          "cancel_amount"
+        ],
+        "event_count": 78245,
+        "metrics": {
+          "cancel_amount": "21970.91"
+        }
+      },
+      "split": "validation",
+      "reference_case": "R29"
+    },
+    {
+      "id": "N13",
+      "question": "请报2011年11月的营收；口径我还没选。",
+      "patch": {
+        "supported": true
+      },
+      "expected": {
+        "kind": "clarification",
+        "fields": [
+          "metrics"
+        ]
+      },
+      "split": "validation",
+      "reference_case": "C02"
+    },
+    {
+      "id": "N14",
+      "question": "净销售金额先算一下，日期随后补充。",
+      "patch": {
+        "supported": true
+      },
+      "expected": {
+        "kind": "clarification",
+        "fields": [
+          "time_range"
+        ]
+      },
+      "split": "validation",
+      "reference_case": "C03"
+    },
+    {
+      "id": "N15",
+      "question": "2011年4月31日的正向开票金额是多少？",
+      "patch": {
+        "supported": true
+      },
+      "expected": {
+        "kind": "clarification",
+        "fields": [
+          "time_range"
+        ]
+      },
+      "split": "validation",
+      "reference_case": "C09"
+    },
+    {
+      "id": "N16",
+      "question": "查今年的净额。",
+      "patch": {
+        "supported": true
+      },
+      "expected": {
+        "kind": "clarification",
+        "fields": [
+          "time_range"
+        ]
+      },
+      "split": "validation",
+      "reference_case": "C07"
+    },
+    {
+      "id": "N17",
+      "question": "以2011年11月为范围，对平均发票金额给一个Bootstrap置信区间。",
+      "patch": {
+        "supported": true,
+        "analysis": "invoice_ci",
+        "time_range": {
+          "all_dates": false,
+          "start_date": "2011-11-01",
+          "end_date": "2011-11-30"
+        }
+      },
+      "expected": {
+        "kind": "invoice_ci",
+        "scope": {
+          "all_dates": false,
+          "start_date": "2011-11-01",
+          "end_date": "2011-11-30"
+        },
+        "status": "ok",
+        "invoice_count": 2642,
+        "cluster_count": 1660,
+        "excluded_unidentified_or_inconsistent_invoices": 109,
+        "mean": 432.30347085541257
+      },
+      "split": "validation",
+      "reference_case": "B01"
+    },
+    {
+      "id": "N18",
+      "question": "限发票号为536365，统计全期的订单金额均值及其区间估计。",
+      "patch": {
+        "supported": true,
+        "analysis": "invoice_ci",
+        "time_range": {
+          "all_dates": true
+        },
+        "order_id": "536365"
+      },
+      "expected": {
+        "kind": "invoice_ci",
+        "scope": {
+          "all_dates": true,
+          "order_id": "536365"
+        },
+        "status": "insufficient_clusters",
+        "invoice_count": 1,
+        "cluster_count": 1,
+        "excluded_unidentified_or_inconsistent_invoices": 0,
+        "mean": 139.12
+      },
+      "split": "validation",
+      "reference_case": "B02"
+    },
+    {
+      "id": "N19",
+      "question": "对2011年11月的转化率做置信区间估计。",
+      "patch": {
+        "supported": false
+      },
+      "expected": {
+        "kind": "unsupported"
+      },
+      "split": "validation",
+      "reference_case": "U01"
+    },
+    {
+      "id": "N20",
+      "question": "用现有数据预测2012年的销售额。",
+      "patch": {
+        "supported": false
+      },
+      "expected": {
+        "kind": "unsupported"
+      },
+      "split": "validation",
+      "reference_case": "U03"
+    }
+  ]
+}

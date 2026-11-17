@@ -1,0 +1,52 @@
+{
+  "version": "1.0.2",
+  "observed_date_local": "2026-11-17",
+  "timezone": "Asia/Shanghai",
+  "evidence_source": "user_provided_terminal_screenshot",
+  "original_acceptance_json_reviewed": false,
+  "reported_acceptance_file": "acceptance_v102_38c73edf8e5d4ab2a1778ea774d6eb2c.json",
+  "platform": "Windows",
+  "python": "3.13.7",
+  "model": "qwen-plus",
+  "observed_status": "passed",
+  "phases": {
+    "known_failures": {
+      "completed": 4,
+      "passed": 4,
+      "total_model_calls": 4,
+      "total_tokens": 3532,
+      "elapsed_seconds": 6.626
+    },
+    "regression": {
+      "completed": 50,
+      "passed": 50,
+      "total_model_calls": 50,
+      "total_tokens": 45354,
+      "elapsed_seconds": 116.976
+    },
+    "new_wording_check": {
+      "completed": 20,
+      "passed": 20,
+      "total_model_calls": 20,
+      "total_tokens": 18180,
+      "elapsed_seconds": 47.323
+    }
+  },
+  "new_wording_per_case": {
+    "mean_tokens": 909,
+    "mean_elapsed_seconds": 2.36615
+  },
+  "baseline_regression": {
+    "passed": 46,
+    "completed": 50,
+    "total_tokens": 39522,
+    "elapsed_seconds": 97.799
+  },
+  "interpretation": [
+    "The 4 known failures overlap the original 50 regression cases.",
+    "The original 50 cases were used for debugging and are regression evidence.",
+    "The new 20 cases are a limited wording check, not broad production accuracy.",
+    "Total token use for the original 50 increased by 14.8%; actual billed cost is not measured.",
+    "The screenshot is the evidence source; this JSON is a transcription, not the original evaluator report."
+  ]
+}

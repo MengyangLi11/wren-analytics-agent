@@ -1,0 +1,2 @@
+# Evidence and release gates hash exact bytes. Preserve source and JSON bytes.
+* -text
