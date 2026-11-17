@@ -1,0 +1,35 @@
+{
+  "version": "1.0.2",
+  "client_date": "2026-11-18",
+  "verified_at_utc": "2026-11-17T16:10:10.304579+00:00",
+  "source": "https://github.com/MengyangLi11/wren-analytics-agent",
+  "commit": "aa6c9ffa1c8c7a06fe92a906b4b796dcf06ad6e3",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "isolated_venv": true,
+  "dependency_installer": "uv",
+  "wheel_cache_reused": true,
+  "source_excel_downloaded_from_uci": true,
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "kept_rows": 536429,
+  "totals": {
+    "gross_sales": "10271034.61",
+    "cancel_amount": "478724.18",
+    "net_sales": "9792310.43"
+  },
+  "unit_tests": {
+    "passed": 64,
+    "warnings": 3,
+    "elapsed_seconds": 5.62
+  },
+  "offline_protocol_regression": {
+    "completed": 50,
+    "passed": 50,
+    "total_model_calls": 0,
+    "total_tokens": 0,
+    "elapsed_seconds": 3.158
+  },
+  "live_api_calls": 0,
+  "tracked_worktree_clean": true,
+  "scope_note": "Fresh GitHub clone and independent Linux environment verified. Windows results are recorded separately in observed_windows_reproduction_v102.json. Offline checks are not model accuracy measurements."
+}

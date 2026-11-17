@@ -1,0 +1,18 @@
+{
+  "type": "documentation-only",
+  "runtime_version": "1.0.2",
+  "date": "2026-11-18",
+  "runtime_files_modified": false,
+  "files": {
+    "README.md": "5e9b134d8f7ad11f0a0adfa594eb19200fdf8f6936106a40a8f931b4f9932bce",
+    "docs/observed_windows_reproduction_v102.json": "aac0c7892ff1ba9d598c81946f708ae6f08f1e00d971c2fa23925c0b67d84971",
+    "docs/reproduction_linux_v102.json": "a3f882e9ac6262248df5a41eac934c020735ed98aa4538837f4229d62c6c749f",
+    "docs/三分钟演示脚本.md": "e06d85bcfd60d7b0d8afcaaffd6d9729bdd1a07e18e0f286d8ecaa3a335dcfd8",
+    "docs/交付验证.md": "76f4af769ccfc14dc2c4167862795773cccfaff486ab5939d3640206d929f528",
+    "docs/收尾操作.md": "870fa9ed59efa9945675e0507e8d7c6b110d91d3b6ce448a3b95fd819e12ad61",
+    "docs/独立环境复现记录.md": "983c4f417d47234b1a6852b77a590c178021c0146d36e4b5599c14baf2a6c68b",
+    "docs/简历项目条目.md": "d7973b64de1f88f95fa66b164a562e40dac5db2c024754d138436aca89f06ece",
+    "docs/面试一分钟介绍.md": "857f2736b624d2f10ebc91bc4406d85852e410202a263d17fd66646877a96385",
+    "docs/验收与面试.md": "7cb8cae5546433a4ddc5c3b6a9b4084a124efcbe94f432bffa1610be3cc07c8c"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "verified-documentation-handoff",
+  "runtime_version": "1.0.2",
+  "date": "2026-11-18",
+  "runtime_code_modified": false,
+  "original_report_included": false,
+  "original_report_sha256": "b5f0330c06cf423ffdd42a48fc6eb25549680645788b5623b99a06d16a067998",
+  "files": {
+    "README.md": "3265c22ba37d1345a8481212bac23e0ad0cf09bc05707b708799272a357eca2f",
+    "docs/evidence/acceptance_v102_verified_summary.json": "d3da32b12e257b3a484442ea15620a91a647850c9c564adf696f3b7661c968b2",
+    "docs/observed_live_acceptance_v102.json": "fb980aafef5fb060a619bac4d6ea169424b4d9e4025ac7f7757fb6d22ad05bf2",
+    "docs/observed_windows_reproduction_v102.json": "ccd3c1376af03e330fbed92b837dea55255c13c23cf500d5f77b19d5dc043fb4",
+    "docs/reproduction_linux_v102.json": "a3f882e9ac6262248df5a41eac934c020735ed98aa4538837f4229d62c6c749f",
+    "docs/三分钟演示脚本.md": "e06d85bcfd60d7b0d8afcaaffd6d9729bdd1a07e18e0f286d8ecaa3a335dcfd8",
+    "docs/交付验证.md": "1505bf4fa5b9ac9d37b34b4b70385acc63a4fde6b46dd6aa0c7ec7f7225d44e3",
+    "docs/实测验收记录.md": "35d0f729c43265d0ebff9c2c2051e2314fe7c7428aa1386600daa5437cfc24f9",
+    "docs/收尾操作.md": "e5813e9d9ac9c2c7f5ef15a1b11e5e4830a1c6e129cc587ea231929914a22894",
+    "docs/独立环境复现记录.md": "5b2940f709dc7f8962b660fb3e9180825f2b86af4353007f80a8938a237cbb54",
+    "docs/简历项目条目.md": "d7973b64de1f88f95fa66b164a562e40dac5db2c024754d138436aca89f06ece",
+    "docs/面试一分钟介绍.md": "857f2736b624d2f10ebc91bc4406d85852e410202a263d17fd66646877a96385",
+    "docs/验收与面试.md": "dfd02ce267e3bcf96adb1eaa5f80e318159cea0f8be2816aa77b2446532b5279"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "version": "1.0.2",
+  "observed_date_local": "2026-11-18",
+  "timezone": "Asia/Shanghai",
+  "evidence_source": "user_provided_browser_and_terminal_screenshots",
+  "source_repository": "https://github.com/MengyangLi11/wren-analytics-agent",
+  "directory": "wren-analytics-agent-repro",
+  "platform": "Windows",
+  "unit_tests": {
+    "status": "passed",
+    "passed": 64,
+    "warnings": 3,
+    "elapsed_seconds": 7.3
+  },
+  "offline_protocol_regression": {
+    "completed": 50,
+    "passed": 50,
+    "total_model_calls": 0,
+    "total_tokens": 0,
+    "elapsed_seconds": 3.356
+  },
+  "web_manual_summary": {
+    "status": "passed",
+    "model_calls": 0,
+    "tokens": 0,
+    "scope": {
+      "start_date": "2011-11-01",
+      "end_date": "2011-11-30",
+      "invoice_filter": null,
+      "country_filter": null
+    },
+    "definition_version": "retail-invoice-v1",
+    "currency": "GBP",
+    "event_rows": 84107,
+    "gross_sales": "1457742.24",
+    "cancel_amount": "25010.54",
+    "net_sales": "1432731.70"
+  },
+  "manual_cli_evidence_replay": {
+    "status": "passed",
+    "verified_analyses": 1,
+    "evidence_source": "user_provided_terminal_screenshot",
+    "message": "核验通过：1 次分析与当前数据快照一致。"
+  },
+  "note": "This record is transcribed from screenshots, not the original evaluator JSON. Offline and manual checks do not measure LLM understanding accuracy.",
+  "evidence_sources": {
+    "unit_tests": "user_provided_terminal_output_text",
+    "offline_protocol_regression": "user_provided_terminal_screenshot",
+    "web_manual_summary": "user_provided_browser_screenshot"
+  }
+}

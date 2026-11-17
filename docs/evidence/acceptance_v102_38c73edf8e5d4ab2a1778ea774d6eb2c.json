@@ -1,0 +1,3691 @@
+{
+  "version": "1.0.2",
+  "status": "passed",
+  "phases": {
+    "known_failures": {
+      "suite": "retail-v1",
+      "mode": "live",
+      "split": "all",
+      "evaluation_role": "已用于调试的固定回归集",
+      "interpretation": "真实API端到端评测；每题新会话",
+      "benchmark_sha256": "426f8856dfe37742d66d2de97baaf7bd6a64c5b21cb9d3de9fef02cdc86ab1da",
+      "code_sha256": {
+        "agent.py": "3fdd58e44b271d274a826d4299b1db803e76c4f6de65271fd62d28d7c8cce270",
+        "common.py": "80845092b6daab102aad310f37ba4549732c38a6bef58a1025ef54e202675516",
+        "dataset.py": "cd635a9252a27abd0df1fb10a9e64b24664a01a8fd569d5125e71ad329207325",
+        "filters.py": "6b0c5b670fa3c0196875b5c71663327b17e0e923d862e34e87733245f8da08ba",
+        "policy.py": "9efe53b1b9485d0f8e0c92fdc086b5b3961d84d65a6ca8be920b200ec512f8f9",
+        "statistics.py": "f7212e19f809565dd618d6da3621319cb329b3f54d79ab9c00acd22aedc65984",
+        "store.py": "cded4f5fab947b8d74cea385638f6da22e2210251fddb36686f253a3507cc3c8",
+        "__init__.py": "a1f1da8f6cbfa9c2c6de1452774f8562e3bb6b59f852674b938d7e6a31f763dc"
+      },
+      "cases": [
+        {
+          "id": "C04",
+          "passed": true,
+          "reasons": [],
+          "question": "全部现有交易事件的收入是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": null,
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.364,
+          "model_calls": 1,
+          "tokens": 870,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "metrics"
+            ]
+          },
+          "session_report": "reports/sessions/session_70e0c31a0d394aad964b64f2565f80f9.json"
+        },
+        {
+          "id": "C07",
+          "passed": true,
+          "reasons": [],
+          "question": "昨天销售额多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.389,
+          "model_calls": 1,
+          "tokens": 868,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_4c51bd53efbd40dfbdf1322320df9046.json"
+        },
+        {
+          "id": "C09",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年13月销售额多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.306,
+          "model_calls": 1,
+          "tokens": 875,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_f6d613373088426c964ebd4d56809a85.json"
+        },
+        {
+          "id": "B01",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月订单金额均值的置信区间。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.567,
+          "model_calls": 1,
+          "tokens": 919,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "status": "ok",
+            "invoice_count": 2642,
+            "cluster_count": 1660,
+            "excluded_unidentified_or_inconsistent_invoices": 109,
+            "mean": 432.30347085541257
+          },
+          "session_report": "reports/sessions/session_c62602ce254245e397eab55149340fcc.json"
+        }
+      ],
+      "summary": {
+        "completed": 4,
+        "passed": 4,
+        "total_model_calls": 4,
+        "total_tokens": 3532,
+        "elapsed_seconds": 6.626
+      }
+    },
+    "regression": {
+      "suite": "retail-v1",
+      "mode": "live",
+      "split": "all",
+      "evaluation_role": "已用于调试的固定回归集",
+      "interpretation": "真实API端到端评测；每题新会话",
+      "benchmark_sha256": "426f8856dfe37742d66d2de97baaf7bd6a64c5b21cb9d3de9fef02cdc86ab1da",
+      "code_sha256": {
+        "agent.py": "3fdd58e44b271d274a826d4299b1db803e76c4f6de65271fd62d28d7c8cce270",
+        "common.py": "80845092b6daab102aad310f37ba4549732c38a6bef58a1025ef54e202675516",
+        "dataset.py": "cd635a9252a27abd0df1fb10a9e64b24664a01a8fd569d5125e71ad329207325",
+        "filters.py": "6b0c5b670fa3c0196875b5c71663327b17e0e923d862e34e87733245f8da08ba",
+        "policy.py": "9efe53b1b9485d0f8e0c92fdc086b5b3961d84d65a6ca8be920b200ec512f8f9",
+        "statistics.py": "f7212e19f809565dd618d6da3621319cb329b3f54d79ab9c00acd22aedc65984",
+        "store.py": "cded4f5fab947b8d74cea385638f6da22e2210251fddb36686f253a3507cc3c8",
+        "__init__.py": "a1f1da8f6cbfa9c2c6de1452774f8562e3bb6b59f852674b938d7e6a31f763dc"
+      },
+      "cases": [
+        {
+          "id": "R01",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2010年12月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2010-12-01",
+                "end_date": "2010-12-31"
+              }
+            }
+          ],
+          "seconds": 2.294,
+          "model_calls": 1,
+          "tokens": 935,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 42008,
+            "metrics": {
+              "gross_sales": "777865.64",
+              "cancel_amount": "17607.86",
+              "net_sales": "760257.78"
+            }
+          },
+          "session_report": "reports/sessions/session_3378cf32f9fe48d3a7e64a561ffe9be0.json"
+        },
+        {
+          "id": "R02",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年1月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-01-01",
+              "end_date": "2011-01-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-01-01",
+                "end_date": "2011-01-31"
+              }
+            }
+          ],
+          "seconds": 2.466,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-01-01",
+              "end_date": "2011-01-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 34825,
+            "metrics": {
+              "gross_sales": "671914.94",
+              "cancel_amount": "91526.30",
+              "net_sales": "580388.64"
+            }
+          },
+          "session_report": "reports/sessions/session_0025b3bc44d846d7bcd8d48c179714c1.json"
+        },
+        {
+          "id": "R03",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年2月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-02-01",
+              "end_date": "2011-02-28"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-02-01",
+                "end_date": "2011-02-28"
+              }
+            }
+          ],
+          "seconds": 2.846,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-02-01",
+              "end_date": "2011-02-28"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 27379,
+            "metrics": {
+              "gross_sales": "508869.75",
+              "cancel_amount": "8375.87",
+              "net_sales": "500493.88"
+            }
+          },
+          "session_report": "reports/sessions/session_cdde97b93a7b46fda0634e568d49f8b0.json"
+        },
+        {
+          "id": "R04",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年3月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-03-01",
+              "end_date": "2011-03-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-03-01",
+                "end_date": "2011-03-31"
+              }
+            }
+          ],
+          "seconds": 2.839,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-03-01",
+              "end_date": "2011-03-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 36242,
+            "metrics": {
+              "gross_sales": "691132.59",
+              "cancel_amount": "10675.30",
+              "net_sales": "680457.29"
+            }
+          },
+          "session_report": "reports/sessions/session_7092b8dabbbd42b59630ed5958da010c.json"
+        },
+        {
+          "id": "R05",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年4月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-04-01",
+              "end_date": "2011-04-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-04-01",
+                "end_date": "2011-04-30"
+              }
+            }
+          ],
+          "seconds": 2.702,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-04-01",
+              "end_date": "2011-04-30"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 29484,
+            "metrics": {
+              "gross_sales": "516194.91",
+              "cancel_amount": "33316.91",
+              "net_sales": "482878.00"
+            }
+          },
+          "session_report": "reports/sessions/session_b2da0452b4e54971b5e3172e8a8e170c.json"
+        },
+        {
+          "id": "R06",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年5月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-05-01",
+              "end_date": "2011-05-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-05-01",
+                "end_date": "2011-05-31"
+              }
+            }
+          ],
+          "seconds": 2.825,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-05-01",
+              "end_date": "2011-05-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 36533,
+            "metrics": {
+              "gross_sales": "741153.76",
+              "cancel_amount": "8948.23",
+              "net_sales": "732205.53"
+            }
+          },
+          "session_report": "reports/sessions/session_7c1ae924a86b424398e17b5707d2a4a5.json"
+        },
+        {
+          "id": "R07",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年6月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-06-01",
+              "end_date": "2011-06-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-06-01",
+                "end_date": "2011-06-30"
+              }
+            }
+          ],
+          "seconds": 2.765,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-06-01",
+              "end_date": "2011-06-30"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 36442,
+            "metrics": {
+              "gross_sales": "738751.87",
+              "cancel_amount": "13760.84",
+              "net_sales": "724991.03"
+            }
+          },
+          "session_report": "reports/sessions/session_cb715aea727448b79543027e0d109973.json"
+        },
+        {
+          "id": "R08",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年7月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-07-01",
+              "end_date": "2011-07-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-07-01",
+                "end_date": "2011-07-31"
+              }
+            }
+          ],
+          "seconds": 2.772,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-07-01",
+              "end_date": "2011-07-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 39082,
+            "metrics": {
+              "gross_sales": "689289.86",
+              "cancel_amount": "11409.21",
+              "net_sales": "677880.65"
+            }
+          },
+          "session_report": "reports/sessions/session_a10552ec6b3b4550a6309a3db96ff305.json"
+        },
+        {
+          "id": "R09",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年8月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-08-01",
+              "end_date": "2011-08-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-08-01",
+                "end_date": "2011-08-31"
+              },
+              "supported": true
+            }
+          ],
+          "seconds": 2.733,
+          "model_calls": 1,
+          "tokens": 933,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-08-01",
+              "end_date": "2011-08-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 34941,
+            "metrics": {
+              "gross_sales": "725493.76",
+              "cancel_amount": "22929.52",
+              "net_sales": "702564.24"
+            }
+          },
+          "session_report": "reports/sessions/session_8eaae13dc7e342258e7c25208a12d519.json"
+        },
+        {
+          "id": "R10",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年9月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-09-01",
+              "end_date": "2011-09-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-09-01",
+                "end_date": "2011-09-30"
+              }
+            }
+          ],
+          "seconds": 2.841,
+          "model_calls": 1,
+          "tokens": 934,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-09-01",
+              "end_date": "2011-09-30"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 49815,
+            "metrics": {
+              "gross_sales": "1030468.78",
+              "cancel_amount": "17044.68",
+              "net_sales": "1013424.10"
+            }
+          },
+          "session_report": "reports/sessions/session_e80efec9d44346419fa393c6ceb19c5d.json"
+        },
+        {
+          "id": "R11",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年10月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-10-01",
+              "end_date": "2011-10-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-10-01",
+                "end_date": "2011-10-31"
+              }
+            }
+          ],
+          "seconds": 2.723,
+          "model_calls": 1,
+          "tokens": 935,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-10-01",
+              "end_date": "2011-10-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 60193,
+            "metrics": {
+              "gross_sales": "1106666.53",
+              "cancel_amount": "43992.16",
+              "net_sales": "1062674.37"
+            }
+          },
+          "session_report": "reports/sessions/session_8c5f553af96648d48a803120111b17af.json"
+        },
+        {
+          "id": "R12",
+          "passed": true,
+          "reasons": [],
+          "question": "统计2011年11月的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 3.031,
+          "model_calls": 1,
+          "tokens": 935,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 84107,
+            "metrics": {
+              "gross_sales": "1457742.24",
+              "cancel_amount": "25010.54",
+              "net_sales": "1432731.70"
+            }
+          },
+          "session_report": "reports/sessions/session_dc676b618b014189a0e56742477d8056.json"
+        },
+        {
+          "id": "R13",
+          "passed": true,
+          "reasons": [],
+          "question": "全期的正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "time_range": {
+                "all_dates": true
+              },
+              "supported": true
+            }
+          ],
+          "seconds": 2.079,
+          "model_calls": 1,
+          "tokens": 895,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 536429,
+            "metrics": {
+              "gross_sales": "10271034.61",
+              "cancel_amount": "478724.18",
+              "net_sales": "9792310.43"
+            }
+          },
+          "session_report": "reports/sessions/session_363a0c854a534d0c96a60630a698c8d7.json"
+        },
+        {
+          "id": "R14",
+          "passed": true,
+          "reasons": [],
+          "question": "2010-12-01当天的净销售额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2010-12-01",
+                "end_date": "2010-12-01"
+              }
+            }
+          ],
+          "seconds": 2.515,
+          "model_calls": 1,
+          "tokens": 917,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 3089,
+            "metrics": {
+              "net_sales": "57328.60"
+            }
+          },
+          "session_report": "reports/sessions/session_401717a8c1e54e1ea11b36d3bba6fb52.json"
+        },
+        {
+          "id": "R15",
+          "passed": true,
+          "reasons": [],
+          "question": "2011-12-09当天的净销售额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-12-09",
+              "end_date": "2011-12-09"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-12-09",
+                "end_date": "2011-12-09"
+              }
+            }
+          ],
+          "seconds": 2.684,
+          "model_calls": 1,
+          "tokens": 917,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-12-09",
+              "end_date": "2011-12-09"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 1624,
+            "metrics": {
+              "net_sales": "29549.88"
+            }
+          },
+          "session_report": "reports/sessions/session_4465d022050046b59cdb0a4666b12b8a.json"
+        },
+        {
+          "id": "R16",
+          "passed": true,
+          "reasons": [],
+          "question": "2012-01-01当天的净销售额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2012-01-01",
+              "end_date": "2012-01-01"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2012-01-01",
+                "end_date": "2012-01-01"
+              }
+            }
+          ],
+          "seconds": 2.735,
+          "model_calls": 1,
+          "tokens": 917,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2012-01-01",
+              "end_date": "2012-01-01"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_d54cccbf8d3b4baab8a6f38ea19c0fa8.json"
+        },
+        {
+          "id": "R17",
+          "passed": true,
+          "reasons": [],
+          "question": "查询全期United Kingdom的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "United Kingdom"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "United Kingdom",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.36,
+          "model_calls": 1,
+          "tokens": 887,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "United Kingdom"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 491334,
+            "metrics": {
+              "net_sales": "8301319.83"
+            }
+          },
+          "session_report": "reports/sessions/session_fbafa1cfe0164029b9c53a740823ea00.json"
+        },
+        {
+          "id": "R18",
+          "passed": true,
+          "reasons": [],
+          "question": "查询全期Germany的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "Germany"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "Germany",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.199,
+          "model_calls": 1,
+          "tokens": 885,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "Germany"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 9095,
+            "metrics": {
+              "net_sales": "200808.40"
+            }
+          },
+          "session_report": "reports/sessions/session_0898ed88e2d84984b785cd0cc8007cd1.json"
+        },
+        {
+          "id": "R19",
+          "passed": true,
+          "reasons": [],
+          "question": "查询全期France的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "France"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "France",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.031,
+          "model_calls": 1,
+          "tokens": 885,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "France"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 8234,
+            "metrics": {
+              "net_sales": "182163.39"
+            }
+          },
+          "session_report": "reports/sessions/session_94afdc03067b4f1ab85f5fc4a29547a1.json"
+        },
+        {
+          "id": "R20",
+          "passed": true,
+          "reasons": [],
+          "question": "查询全期EIRE的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "EIRE"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "EIRE",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 1.988,
+          "model_calls": 1,
+          "tokens": 887,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "EIRE"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 8071,
+            "metrics": {
+              "net_sales": "259663.46"
+            }
+          },
+          "session_report": "reports/sessions/session_81afd631a1134689a3e35c3bd7fe7376.json"
+        },
+        {
+          "id": "R21",
+          "passed": true,
+          "reasons": [],
+          "question": "查询全期Spain的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "Spain"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "Spain",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.063,
+          "model_calls": 1,
+          "tokens": 885,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "Spain"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 2467,
+            "metrics": {
+              "net_sales": "51765.20"
+            }
+          },
+          "session_report": "reports/sessions/session_798b093ae7974e7dbe6a6ac77138da73.json"
+        },
+        {
+          "id": "R22",
+          "passed": true,
+          "reasons": [],
+          "question": "查询全期Japan的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "Japan"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "Japan",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 1.913,
+          "model_calls": 1,
+          "tokens": 885,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "Japan"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 355,
+            "metrics": {
+              "net_sales": "35419.79"
+            }
+          },
+          "session_report": "reports/sessions/session_4d8bd9eef15441fd91c9f43aed86b087.json"
+        },
+        {
+          "id": "R23",
+          "passed": true,
+          "reasons": [],
+          "question": "查询发票号为536365的全部交易事件，汇总正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "536365",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "order_id": "536365",
+              "supported": true
+            }
+          ],
+          "seconds": 2.335,
+          "model_calls": 1,
+          "tokens": 910,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "order_id": "536365"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 7,
+            "metrics": {
+              "gross_sales": "139.12",
+              "cancel_amount": "0.00",
+              "net_sales": "139.12"
+            }
+          },
+          "session_report": "reports/sessions/session_0efd595ee79041e3a8606ff31d193239.json"
+        },
+        {
+          "id": "R24",
+          "passed": true,
+          "reasons": [],
+          "question": "查询发票号为536367的全部交易事件，汇总正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "536367",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "order_id": "536367",
+              "supported": true
+            }
+          ],
+          "seconds": 2.208,
+          "model_calls": 1,
+          "tokens": 910,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "order_id": "536367"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 12,
+            "metrics": {
+              "gross_sales": "278.73",
+              "cancel_amount": "0.00",
+              "net_sales": "278.73"
+            }
+          },
+          "session_report": "reports/sessions/session_0172cbd228964fc797029e33af263340.json"
+        },
+        {
+          "id": "R25",
+          "passed": true,
+          "reasons": [],
+          "question": "查询发票号为C536379的全部交易事件，汇总正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "C536379",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "order_id": "C536379",
+              "supported": true
+            }
+          ],
+          "seconds": 2.221,
+          "model_calls": 1,
+          "tokens": 912,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": true,
+              "order_id": "C536379"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_8b5383e60ac14eada7d0105eb3702ec4.json"
+        },
+        {
+          "id": "R26",
+          "passed": true,
+          "reasons": [],
+          "question": "查询发票号为999999999的全部交易事件，汇总正向开票金额、取消冲减金额和净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "999999999",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "order_id": "999999999",
+              "supported": true
+            }
+          ],
+          "seconds": 2.376,
+          "model_calls": 1,
+          "tokens": 916,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": true,
+              "order_id": "999999999"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_82cfd720e0ef4ed6868b4908563590fb.json"
+        },
+        {
+          "id": "R27",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年1月United Kingdom的取消金额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-01-01",
+              "end_date": "2011-01-31"
+            },
+            "order_id": null,
+            "country": "United Kingdom"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "United Kingdom",
+              "metrics": [
+                "cancel_amount"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-01-01",
+                "end_date": "2011-01-31"
+              }
+            }
+          ],
+          "seconds": 2.849,
+          "model_calls": 1,
+          "tokens": 922,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-01-01",
+              "end_date": "2011-01-31",
+              "country": "United Kingdom"
+            },
+            "requested_metrics": [
+              "cancel_amount"
+            ],
+            "event_count": 31660,
+            "metrics": {
+              "cancel_amount": "90129.53"
+            }
+          },
+          "session_report": "reports/sessions/session_ef1b26aa642549ce977bffbf03d2dab6.json"
+        },
+        {
+          "id": "R28",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年5月United Kingdom的取消金额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-05-01",
+              "end_date": "2011-05-31"
+            },
+            "order_id": null,
+            "country": "United Kingdom"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "United Kingdom",
+              "metrics": [
+                "cancel_amount"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-05-01",
+                "end_date": "2011-05-31"
+              }
+            }
+          ],
+          "seconds": 2.977,
+          "model_calls": 1,
+          "tokens": 922,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-05-01",
+              "end_date": "2011-05-31",
+              "country": "United Kingdom"
+            },
+            "requested_metrics": [
+              "cancel_amount"
+            ],
+            "event_count": 33282,
+            "metrics": {
+              "cancel_amount": "8561.62"
+            }
+          },
+          "session_report": "reports/sessions/session_9f13cf959f5448c39d79201f6d54b9fa.json"
+        },
+        {
+          "id": "R29",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月United Kingdom的取消金额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": "United Kingdom"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "United Kingdom",
+              "metrics": [
+                "cancel_amount"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.805,
+          "model_calls": 1,
+          "tokens": 923,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30",
+              "country": "United Kingdom"
+            },
+            "requested_metrics": [
+              "cancel_amount"
+            ],
+            "event_count": 78245,
+            "metrics": {
+              "cancel_amount": "21970.91"
+            }
+          },
+          "session_report": "reports/sessions/session_776e62366bf741ce8eaa80cb2f0b08c1.json"
+        },
+        {
+          "id": "R30",
+          "passed": true,
+          "reasons": [],
+          "question": "发票号为536365在2010-12-01的净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01"
+            },
+            "order_id": "536365",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "order_id": "536365",
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2010-12-01",
+                "end_date": "2010-12-01"
+              }
+            }
+          ],
+          "seconds": 2.87,
+          "model_calls": 1,
+          "tokens": 937,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01",
+              "order_id": "536365"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 7,
+            "metrics": {
+              "net_sales": "139.12"
+            }
+          },
+          "session_report": "reports/sessions/session_fd0511b0aaf44414b295ac3a3eb41442.json"
+        },
+        {
+          "id": "R31",
+          "passed": true,
+          "reasons": [],
+          "question": "发票号为C536379在2010-12-01的净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01"
+            },
+            "order_id": "C536379",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "order_id": "C536379",
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2010-12-01",
+                "end_date": "2010-12-01"
+              }
+            }
+          ],
+          "seconds": 2.898,
+          "model_calls": 1,
+          "tokens": 939,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01",
+              "order_id": "C536379"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_f6d0de2ec533434495a69279b1007464.json"
+        },
+        {
+          "id": "R32",
+          "passed": true,
+          "reasons": [],
+          "question": "发票号为999999999在2010-12-01的净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01"
+            },
+            "order_id": "999999999",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "order_id": "999999999",
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2010-12-01",
+                "end_date": "2010-12-01"
+              }
+            }
+          ],
+          "seconds": 3.009,
+          "model_calls": 1,
+          "tokens": 943,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2010-12-01",
+              "end_date": "2010-12-01",
+              "order_id": "999999999"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_f8d59ec9314246b8a1e24e33d59c4592.json"
+        },
+        {
+          "id": "C01",
+          "passed": true,
+          "reasons": [],
+          "question": "收入多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": null,
+              "supported": true
+            }
+          ],
+          "seconds": 1.467,
+          "model_calls": 1,
+          "tokens": 859,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "metrics",
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_c0876fcfd5e846eda52edb3e3c662cba.json"
+        },
+        {
+          "id": "C02",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月的收入是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.566,
+          "model_calls": 1,
+          "tokens": 913,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "metrics"
+            ]
+          },
+          "session_report": "reports/sessions/session_297b7230358b462498833995c64d9061.json"
+        },
+        {
+          "id": "C03",
+          "passed": true,
+          "reasons": [],
+          "question": "净销售额多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true
+            }
+          ],
+          "seconds": 1.506,
+          "model_calls": 1,
+          "tokens": 862,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_306187d2d855452b8ddd3484801ba6a4.json"
+        },
+        {
+          "id": "C04",
+          "passed": true,
+          "reasons": [],
+          "question": "全部现有交易事件的收入是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.831,
+          "model_calls": 1,
+          "tokens": 872,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "metrics"
+            ]
+          },
+          "session_report": "reports/sessions/session_a6dd7ba3069d48adaa9ca1c3d894a36f.json"
+        },
+        {
+          "id": "C05",
+          "passed": true,
+          "reasons": [],
+          "question": "统计全部订单的净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true
+            }
+          ],
+          "seconds": 1.562,
+          "model_calls": 1,
+          "tokens": 865,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_98dafbf16d8043b9bfcde3b4e3863a7a.json"
+        },
+        {
+          "id": "C06",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年2月30日的净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.63,
+          "model_calls": 1,
+          "tokens": 880,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_ea1b816b0c5e4714818814ec4b2f42a5.json"
+        },
+        {
+          "id": "C07",
+          "passed": true,
+          "reasons": [],
+          "question": "昨天销售额多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.628,
+          "model_calls": 1,
+          "tokens": 868,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_4bae03e442bd4aed825e724222cd5901.json"
+        },
+        {
+          "id": "C08",
+          "passed": true,
+          "reasons": [],
+          "question": "2011-12-09至2011-12-01的净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-12-01",
+                "end_date": "2011-12-09"
+              }
+            }
+          ],
+          "seconds": 2.381,
+          "model_calls": 1,
+          "tokens": 926,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_569cacb218b747f7963cae445e93ce32.json"
+        },
+        {
+          "id": "C09",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年13月销售额多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.698,
+          "model_calls": 1,
+          "tokens": 875,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_7883669b1aea4ad784e851a6a301e82f.json"
+        },
+        {
+          "id": "C10",
+          "passed": true,
+          "reasons": [],
+          "question": "订单均值的置信区间是多少？",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "metrics": null,
+              "supported": true
+            }
+          ],
+          "seconds": 1.578,
+          "model_calls": 1,
+          "tokens": 866,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_eae3f67c582d4f50b49e46971aed92a3.json"
+        },
+        {
+          "id": "U01",
+          "passed": true,
+          "reasons": [],
+          "question": "全期到账退款多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": "该数据只能核验开票/取消记录与描述性统计，不提供到账退款、利润、预测或实验因果结论。",
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": null,
+              "supported": false,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.577,
+          "model_calls": 1,
+          "tokens": 868,
+          "expected": {
+            "kind": "unsupported"
+          },
+          "session_report": "reports/sessions/session_f4b1bb773828401785085aa59e2de3a7.json"
+        },
+        {
+          "id": "U02",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月利润多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": "该数据只能核验开票/取消记录与描述性统计，不提供到账退款、利润、预测或实验因果结论。",
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": null,
+              "supported": false,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.631,
+          "model_calls": 1,
+          "tokens": 873,
+          "expected": {
+            "kind": "unsupported"
+          },
+          "session_report": "reports/sessions/session_bbdf0c83f23e4a73909658626be8ba78.json"
+        },
+        {
+          "id": "U03",
+          "passed": true,
+          "reasons": [],
+          "question": "预测2012年的销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": "该数据只能核验开票/取消记录与描述性统计，不提供到账退款、利润、预测或实验因果结论。",
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": false,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.752,
+          "model_calls": 1,
+          "tokens": 872,
+          "expected": {
+            "kind": "unsupported"
+          },
+          "session_report": "reports/sessions/session_4a2f93c68f0e4d86a2e4d4b23dee3536.json"
+        },
+        {
+          "id": "U04",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月销售变化是否显著？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": "该数据只能核验开票/取消记录与描述性统计，不提供到账退款、利润、预测或实验因果结论。",
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.454,
+          "model_calls": 1,
+          "tokens": 914,
+          "expected": {
+            "kind": "unsupported"
+          },
+          "session_report": "reports/sessions/session_06dad7a03b8241699c022f617301bf33.json"
+        },
+        {
+          "id": "B01",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月订单金额均值的置信区间。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.792,
+          "model_calls": 1,
+          "tokens": 919,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "status": "ok",
+            "invoice_count": 2642,
+            "cluster_count": 1660,
+            "excluded_unidentified_or_inconsistent_invoices": 109,
+            "mean": 432.30347085541257
+          },
+          "session_report": "reports/sessions/session_63b3654af0864343944e35aed2310cb2.json"
+        },
+        {
+          "id": "B02",
+          "passed": true,
+          "reasons": [],
+          "question": "全期发票号为536365的平均订单金额置信区间。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "536365",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "order_id": "536365",
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.118,
+          "model_calls": 1,
+          "tokens": 894,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": true,
+              "order_id": "536365"
+            },
+            "status": "insufficient_clusters",
+            "invoice_count": 1,
+            "cluster_count": 1,
+            "excluded_unidentified_or_inconsistent_invoices": 0,
+            "mean": 139.12
+          },
+          "session_report": "reports/sessions/session_b57c2ea70fb145f0867213ad9fd23e13.json"
+        },
+        {
+          "id": "B03",
+          "passed": true,
+          "reasons": [],
+          "question": "全期发票号为999999999的平均订单金额置信区间。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "999999999",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "order_id": "999999999",
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.12,
+          "model_calls": 1,
+          "tokens": 900,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": true,
+              "order_id": "999999999"
+            },
+            "status": "no_records",
+            "invoice_count": 0,
+            "cluster_count": 0,
+            "excluded_unidentified_or_inconsistent_invoices": 0,
+            "mean": null
+          },
+          "session_report": "reports/sessions/session_8bfe4fce6f9e47bbbb59366f6832d5ad.json"
+        },
+        {
+          "id": "B04",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年11月Germany订单均值置信区间。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": "Germany"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "country": "Germany",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.733,
+          "model_calls": 1,
+          "tokens": 924,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30",
+              "country": "Germany"
+            },
+            "status": "ok",
+            "invoice_count": 64,
+            "cluster_count": 43,
+            "excluded_unidentified_or_inconsistent_invoices": 0,
+            "mean": 378.9484375
+          },
+          "session_report": "reports/sessions/session_86cec738413741f0a14f5e8218fd3216.json"
+        }
+      ],
+      "summary": {
+        "completed": 50,
+        "passed": 50,
+        "total_model_calls": 50,
+        "total_tokens": 45354,
+        "elapsed_seconds": 116.976
+      }
+    },
+    "new_wording_check": {
+      "suite": "retail-release-check-v102",
+      "mode": "live",
+      "split": "validation",
+      "evaluation_role": "修复后冻结的新措辞检查集；实际表现以首次真实API运行记录为准",
+      "interpretation": "真实API端到端评测；每题新会话",
+      "benchmark_sha256": "ac668e24065359cbb519ba08a759e228f8fc2a608e24240c0dd546c3ffec5953",
+      "code_sha256": {
+        "agent.py": "3fdd58e44b271d274a826d4299b1db803e76c4f6de65271fd62d28d7c8cce270",
+        "common.py": "80845092b6daab102aad310f37ba4549732c38a6bef58a1025ef54e202675516",
+        "dataset.py": "cd635a9252a27abd0df1fb10a9e64b24664a01a8fd569d5125e71ad329207325",
+        "filters.py": "6b0c5b670fa3c0196875b5c71663327b17e0e923d862e34e87733245f8da08ba",
+        "policy.py": "9efe53b1b9485d0f8e0c92fdc086b5b3961d84d65a6ca8be920b200ec512f8f9",
+        "statistics.py": "f7212e19f809565dd618d6da3621319cb329b3f54d79ab9c00acd22aedc65984",
+        "store.py": "cded4f5fab947b8d74cea385638f6da22e2210251fddb36686f253a3507cc3c8",
+        "__init__.py": "a1f1da8f6cbfa9c2c6de1452774f8562e3bb6b59f852674b938d7e6a31f763dc"
+      },
+      "cases": [
+        {
+          "id": "N01",
+          "passed": true,
+          "reasons": [],
+          "question": "请按事件发生日期，给出2011年2月销售额、取消金额和净额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount",
+              "gross_sales",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-02-01",
+              "end_date": "2011-02-28"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-02-01",
+                "end_date": "2011-02-28"
+              }
+            }
+          ],
+          "seconds": 2.801,
+          "model_calls": 1,
+          "tokens": 931,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-02-01",
+              "end_date": "2011-02-28"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 27379,
+            "metrics": {
+              "gross_sales": "508869.75",
+              "cancel_amount": "8375.87",
+              "net_sales": "500493.88"
+            }
+          },
+          "session_report": "reports/sessions/session_9216b4db54594fa1a63a15bd7d62e74a.json"
+        },
+        {
+          "id": "N02",
+          "passed": true,
+          "reasons": [],
+          "question": "2011-04-01到2011-04-30期间，正向开票金额、取消冲减金额、净开票金额各是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-04-01",
+              "end_date": "2011-04-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-04-01",
+                "end_date": "2011-04-30"
+              }
+            }
+          ],
+          "seconds": 2.626,
+          "model_calls": 1,
+          "tokens": 950,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-04-01",
+              "end_date": "2011-04-30"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 29484,
+            "metrics": {
+              "gross_sales": "516194.91",
+              "cancel_amount": "33316.91",
+              "net_sales": "482878.00"
+            }
+          },
+          "session_report": "reports/sessions/session_3da7d786eb9441ec8b9dbfd57da51f5e.json"
+        },
+        {
+          "id": "N03",
+          "passed": true,
+          "reasons": [],
+          "question": "只统计2011年7月份，销售金额、取消额、净销售金额分别汇总。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales",
+              "gross_sales",
+              "cancel_amount"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-07-01",
+              "end_date": "2011-07-31"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-07-01",
+                "end_date": "2011-07-31"
+              },
+              "supported": true
+            }
+          ],
+          "seconds": 2.67,
+          "model_calls": 1,
+          "tokens": 930,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-07-01",
+              "end_date": "2011-07-31"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 39082,
+            "metrics": {
+              "gross_sales": "689289.86",
+              "cancel_amount": "11409.21",
+              "net_sales": "677880.65"
+            }
+          },
+          "session_report": "reports/sessions/session_266f2a95c51f483ab9c7f48f59d6b712.json"
+        },
+        {
+          "id": "N04",
+          "passed": true,
+          "reasons": [],
+          "question": "把起止日设为2011-11-01和2011-11-30，输出销售额、取消金额、净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount",
+              "net_sales",
+              "gross_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.559,
+          "model_calls": 1,
+          "tokens": 946,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 84107,
+            "metrics": {
+              "gross_sales": "1457742.24",
+              "cancel_amount": "25010.54",
+              "net_sales": "1432731.70"
+            }
+          },
+          "session_report": "reports/sessions/session_c0b3c5a346b2400f930812933c9711dd.json"
+        },
+        {
+          "id": "N05",
+          "passed": true,
+          "reasons": [],
+          "question": "以全部现有记录为范围，分别报告销售额、取消冲减金额与净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount",
+              "net_sales",
+              "gross_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 1.988,
+          "model_calls": 1,
+          "tokens": 898,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 536429,
+            "metrics": {
+              "gross_sales": "10271034.61",
+              "cancel_amount": "478724.18",
+              "net_sales": "9792310.43"
+            }
+          },
+          "session_report": "reports/sessions/session_eacc956fe2ea49f1a2843173200defa6.json"
+        },
+        {
+          "id": "N06",
+          "passed": true,
+          "reasons": [],
+          "question": "查2012-01-01的净开票金额；若没有数据，请说明。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2012-01-01",
+              "end_date": "2012-01-01"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2012-01-01",
+                "end_date": "2012-01-01"
+              }
+            }
+          ],
+          "seconds": 2.567,
+          "model_calls": 1,
+          "tokens": 924,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2012-01-01",
+              "end_date": "2012-01-01"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_4047d66465e34d598b3dbaf72c07722a.json"
+        },
+        {
+          "id": "N07",
+          "passed": true,
+          "reasons": [],
+          "question": "德国客户的全部交易记录，净销售额合计是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "Germany"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "Germany",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true
+            }
+          ],
+          "seconds": 1.72,
+          "model_calls": 1,
+          "tokens": 875,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "Germany"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 9095,
+            "metrics": {
+              "net_sales": "200808.40"
+            }
+          },
+          "session_report": "reports/sessions/session_a6ded66e2b6840d8b8c37e5ea86bdac2.json"
+        },
+        {
+          "id": "N08",
+          "passed": true,
+          "reasons": [],
+          "question": "国家为France，按全期统计净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "France"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "France",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.06,
+          "model_calls": 1,
+          "tokens": 886,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "France"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 8234,
+            "metrics": {
+              "net_sales": "182163.39"
+            }
+          },
+          "session_report": "reports/sessions/session_60f3a262ad434953b85ac607bd8da377.json"
+        },
+        {
+          "id": "N09",
+          "passed": true,
+          "reasons": [],
+          "question": "西班牙的净销售金额，统计所有历史数据。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": null,
+            "country": "Spain"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "Spain",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.521,
+          "model_calls": 1,
+          "tokens": 886,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "country": "Spain"
+            },
+            "requested_metrics": [
+              "net_sales"
+            ],
+            "event_count": 2467,
+            "metrics": {
+              "net_sales": "51765.20"
+            }
+          },
+          "session_report": "reports/sessions/session_173c29a709f24f9b9dccde747f2ede9a.json"
+        },
+        {
+          "id": "N10",
+          "passed": true,
+          "reasons": [],
+          "question": "针对'536365'这张发票，查询全期的销售额、取消金额和净销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount",
+              "net_sales",
+              "gross_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "536365",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "order_id": "536365",
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 2.359,
+          "model_calls": 1,
+          "tokens": 913,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": true,
+              "order_id": "536365"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 7,
+            "metrics": {
+              "gross_sales": "139.12",
+              "cancel_amount": "0.00",
+              "net_sales": "139.12"
+            }
+          },
+          "session_report": "reports/sessions/session_ff7ffdfa1beb436f8fb770d9ce740f29.json"
+        },
+        {
+          "id": "N11",
+          "passed": true,
+          "reasons": [],
+          "question": "请汇总全期发票C536379的正向开票金额、取消冲减金额、净开票金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "C536379",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales",
+                "cancel_amount",
+                "net_sales"
+              ],
+              "order_id": "C536379",
+              "supported": true,
+              "time_range": {
+                "all_dates": true
+              }
+            }
+          ],
+          "seconds": 3.132,
+          "model_calls": 1,
+          "tokens": 919,
+          "expected": {
+            "kind": "summary",
+            "status": "no_records",
+            "scope": {
+              "all_dates": true,
+              "order_id": "C536379"
+            },
+            "requested_metrics": [
+              "gross_sales",
+              "cancel_amount",
+              "net_sales"
+            ],
+            "event_count": 0,
+            "metrics": null
+          },
+          "session_report": "reports/sessions/session_be735445facc46a3be45afa0b1d98f24.json"
+        },
+        {
+          "id": "N12",
+          "passed": true,
+          "reasons": [],
+          "question": "只看英国，时间为2011年11月，给出取消冲减金额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "cancel_amount"
+            ],
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": "United Kingdom"
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "country": "United Kingdom",
+              "metrics": [
+                "cancel_amount"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.805,
+          "model_calls": 1,
+          "tokens": 928,
+          "expected": {
+            "kind": "summary",
+            "status": "ok",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30",
+              "country": "United Kingdom"
+            },
+            "requested_metrics": [
+              "cancel_amount"
+            ],
+            "event_count": 78245,
+            "metrics": {
+              "cancel_amount": "21970.91"
+            }
+          },
+          "session_report": "reports/sessions/session_c48f9d6ab9f2473cb498211bcefcf547.json"
+        },
+        {
+          "id": "N13",
+          "passed": true,
+          "reasons": [],
+          "question": "请报2011年11月的营收；口径我还没选。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": null,
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.251,
+          "model_calls": 1,
+          "tokens": 917,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "metrics"
+            ]
+          },
+          "session_report": "reports/sessions/session_d2e7dea0a26e4f57ac04d0cb2a19735c.json"
+        },
+        {
+          "id": "N14",
+          "passed": true,
+          "reasons": [],
+          "question": "净销售金额先算一下，日期随后补充。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.693,
+          "model_calls": 1,
+          "tokens": 875,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_a9e3aa25e14e48fcb564661d9c8def37.json"
+        },
+        {
+          "id": "N15",
+          "passed": true,
+          "reasons": [],
+          "question": "2011年4月31日的正向开票金额是多少？",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "gross_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "gross_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-04-31",
+                "end_date": "2011-04-31"
+              }
+            }
+          ],
+          "seconds": 2.589,
+          "model_calls": 1,
+          "tokens": 919,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_2ecdece859f64c13976af33c8b906d8c.json"
+        },
+        {
+          "id": "N16",
+          "passed": true,
+          "reasons": [],
+          "question": "查今年的净额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": [
+              "net_sales"
+            ],
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "summary",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.683,
+          "model_calls": 1,
+          "tokens": 870,
+          "expected": {
+            "kind": "clarification",
+            "fields": [
+              "time_range"
+            ]
+          },
+          "session_report": "reports/sessions/session_8e4f8affad194a01a1d13576b2453e5a.json"
+        },
+        {
+          "id": "N17",
+          "passed": true,
+          "reasons": [],
+          "question": "以2011年11月为范围，对平均发票金额给一个Bootstrap置信区间。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "metrics": [
+                "net_sales"
+              ],
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.939,
+          "model_calls": 1,
+          "tokens": 925,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": false,
+              "start_date": "2011-11-01",
+              "end_date": "2011-11-30"
+            },
+            "status": "ok",
+            "invoice_count": 2642,
+            "cluster_count": 1660,
+            "excluded_unidentified_or_inconsistent_invoices": 109,
+            "mean": 432.30347085541257
+          },
+          "session_report": "reports/sessions/session_468a239c7c8b413584ac1701a47d5294.json"
+        },
+        {
+          "id": "N18",
+          "passed": true,
+          "reasons": [],
+          "question": "限发票号为536365，统计全期的订单金额均值及其区间估计。",
+          "actual_state": {
+            "analysis": "invoice_ci",
+            "metrics": null,
+            "time_range": {
+              "all_dates": true
+            },
+            "order_id": "536365",
+            "country": null
+          },
+          "first_turn_error": null,
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "order_id": "536365",
+              "supported": true
+            }
+          ],
+          "seconds": 1.895,
+          "model_calls": 1,
+          "tokens": 887,
+          "expected": {
+            "kind": "invoice_ci",
+            "scope": {
+              "all_dates": true,
+              "order_id": "536365"
+            },
+            "status": "insufficient_clusters",
+            "invoice_count": 1,
+            "cluster_count": 1,
+            "excluded_unidentified_or_inconsistent_invoices": 0,
+            "mean": 139.12
+          },
+          "session_report": "reports/sessions/session_d3b87cfd5d8340829e3b5b4d107c6a44.json"
+        },
+        {
+          "id": "N19",
+          "passed": true,
+          "reasons": [],
+          "question": "对2011年11月的转化率做置信区间估计。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": "该数据只能核验开票/取消记录与描述性统计，不提供到账退款、利润、预测或实验因果结论。",
+          "model_tool_arguments": [
+            {
+              "analysis": "invoice_ci",
+              "metrics": null,
+              "supported": true,
+              "time_range": {
+                "all_dates": false,
+                "start_date": "2011-11-01",
+                "end_date": "2011-11-30"
+              }
+            }
+          ],
+          "seconds": 2.502,
+          "model_calls": 1,
+          "tokens": 918,
+          "expected": {
+            "kind": "unsupported"
+          },
+          "session_report": "reports/sessions/session_954fc041ca454b7c9e50a9ac84062c5f.json"
+        },
+        {
+          "id": "N20",
+          "passed": true,
+          "reasons": [],
+          "question": "用现有数据预测2012年的销售额。",
+          "actual_state": {
+            "analysis": "summary",
+            "metrics": null,
+            "time_range": null,
+            "order_id": null,
+            "country": null
+          },
+          "first_turn_error": "该数据只能核验开票/取消记录与描述性统计，不提供到账退款、利润、预测或实验因果结论。",
+          "model_tool_arguments": [
+            {
+              "analysis": null,
+              "country": null,
+              "metrics": null,
+              "order_id": null,
+              "supported": false,
+              "time_range": null
+            }
+          ],
+          "seconds": 1.963,
+          "model_calls": 1,
+          "tokens": 883,
+          "expected": {
+            "kind": "unsupported"
+          },
+          "session_report": "reports/sessions/session_255696eb6294423d825d6378a74b98e4.json"
+        }
+      ],
+      "summary": {
+        "completed": 20,
+        "passed": 20,
+        "total_model_calls": 20,
+        "total_tokens": 18180,
+        "elapsed_seconds": 47.323
+      }
+    }
+  },
+  "execution_mode": "live",
+  "note": "4题故障复测与50题回归有重叠，不合并为独立样本准确率。",
+  "unit_tests_passed": true
+}

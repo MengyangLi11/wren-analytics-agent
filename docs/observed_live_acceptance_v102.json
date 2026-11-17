@@ -2,8 +2,8 @@
   "version": "1.0.2",
   "observed_date_local": "2026-11-17",
   "timezone": "Asia/Shanghai",
-  "evidence_source": "user_provided_terminal_screenshot",
-  "original_acceptance_json_reviewed": false,
+  "evidence_source": "original_user_uploaded_acceptance_report_crosschecked_against_prior_terminal_screenshot",
+  "original_acceptance_json_reviewed": true,
   "reported_acceptance_file": "acceptance_v102_38c73edf8e5d4ab2a1778ea774d6eb2c.json",
   "platform": "Windows",
   "python": "3.13.7",
@@ -47,6 +47,8 @@
     "The original 50 cases were used for debugging and are regression evidence.",
     "The new 20 cases are a limited wording check, not broad production accuracy.",
     "Total token use for the original 50 increased by 14.8%; actual billed cost is not measured.",
-    "The screenshot is the evidence source; this JSON is a transcription, not the original evaluator report."
-  ]
+    "The phase metrics were initially transcribed from screenshots and have now been checked against the original acceptance JSON; the verified summary records the original file hash and review scope."
+  ],
+  "original_acceptance_sha256": "b5f0330c06cf423ffdd42a48fc6eb25549680645788b5623b99a06d16a067998",
+  "reviewed_date_local": "2026-11-18"
 }

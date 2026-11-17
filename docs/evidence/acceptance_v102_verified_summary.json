@@ -1,0 +1,73 @@
+{
+  "version": "1.0.2",
+  "reviewed_date_local": "2026-11-18",
+  "source_file": "acceptance_v102_38c73edf8e5d4ab2a1778ea774d6eb2c.json",
+  "source_file_bytes": 113771,
+  "source_file_sha256": "b5f0330c06cf423ffdd42a48fc6eb25549680645788b5623b99a06d16a067998",
+  "original_report_reviewed": true,
+  "reported_execution_mode": "live",
+  "reported_status": "passed",
+  "reported_unit_tests_passed": true,
+  "validation": {
+    "phase_totals_match_case_records": true,
+    "all_questions_and_expected_answers_match_frozen_benchmarks": true,
+    "benchmark_file_hashes_match": true,
+    "runtime_code_hashes_match": true,
+    "evaluator_matches_frozen_benchmark_metadata": true,
+    "all_74_session_reference_paths_distinct": true,
+    "known_failure_cases_overlap_regression": true
+  },
+  "phases": {
+    "known_failures": {
+      "completed": 4,
+      "passed": 4,
+      "total_model_calls": 4,
+      "total_tokens": 3532,
+      "elapsed_seconds": 6.626
+    },
+    "regression": {
+      "completed": 50,
+      "passed": 50,
+      "total_model_calls": 50,
+      "total_tokens": 45354,
+      "elapsed_seconds": 116.976
+    },
+    "new_wording_check": {
+      "completed": 20,
+      "passed": 20,
+      "total_model_calls": 20,
+      "total_tokens": 18180,
+      "elapsed_seconds": 47.323
+    }
+  },
+  "new_wording_mean_tokens": 909.0,
+  "new_wording_mean_elapsed_seconds": 2.36615,
+  "recorded_model_argument_replay": {
+    "execution_mode": "recorded_response_replay",
+    "platform": "Linux",
+    "phases": {
+      "known_failures": {
+        "completed": 4,
+        "passed": 4
+      },
+      "regression": {
+        "completed": 50,
+        "passed": 50
+      },
+      "new_wording_check": {
+        "completed": 20,
+        "passed": 20
+      }
+    },
+    "actual_external_model_calls": 0,
+    "new_billed_tokens": 0,
+    "description": "Recorded model tool arguments were reapplied to the frozen guard/state/query/statistics pipeline and graded against the original independent references. This is not another live API run."
+  },
+  "scope_limits": [
+    "The four known-failure cases overlap the original fifty regression cases.",
+    "The original fifty cases were used for debugging; the additional twenty check limited wording changes.",
+    "The uploaded aggregate report references individual session files; those original session JSON files were not supplied.",
+    "The aggregate report does not contain per-request response_model or full HTTP/usage metadata; model identity follows the user configuration.",
+    "SHA-256 establishes byte consistency, not a signature or independent provider attestation."
+  ]
+}
